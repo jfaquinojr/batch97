@@ -73,10 +73,18 @@ namespace batch97.Controllers
             return View(model);
         }
 
-        [Route("section")]
-        public IActionResult Section(string id)
+        [Route("sections")]
+        public IActionResult Sections()
         {
             var model = api.Pages.GetAll<Models.SectionPage>();
+
+            return View(model);
+        }
+
+        [Route("section")]
+        public IActionResult Section(Guid id)
+        {
+            var model = api.Pages.GetById<Models.SectionPage>(id);
 
             return View(model);
         }

@@ -19,4 +19,10 @@
     <PackageReference Include="Piranha.Local.FileStorage" Version="5.2.0" />
     <PackageReference Include="Piranha.Manager" Version="5.2.1" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Cms\Section.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
 </Project>
