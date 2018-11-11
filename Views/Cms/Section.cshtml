@@ -4,14 +4,27 @@
     //ViewBag.Title = Model.Title;
 }
 
-    <!-- Page Heading -->
-    <h1 class="my-4">@Model.Title
-      <small>sections</small>
-    </h1>
+<!-- Page Heading -->
+<h1 class="my-4 text-center text-lg-left">@Model.Section.Name</h1>
 
 
-@foreach (var item in Model.Alumni)
-{
 
-}
 
+<div class="row">
+    @foreach (var item in Model.Alumni)
+    {
+    <div class="col-lg-3 col-md-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="@Url.Content(item.Photo)" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="#">@(item.Firstname + " " + item.Lastname)</a>
+                </h4>
+                <p class="card-text">
+                    @item.Ambition
+                </p>
+            </div>
+        </div>
+    </div>
+    }
+</div>
