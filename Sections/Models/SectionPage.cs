@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace batch97.Models
 {
     [PageType(Title = "Class Section page")]
-    [PageTypeRoute(Title = "Default", Route = "/class")]
+    [PageTypeRoute(Title = "Default", Route = "/sections")]
     public class SectionPage : Page<SectionPage>
     {
         /// <summary>

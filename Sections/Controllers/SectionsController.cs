@@ -19,7 +19,6 @@ namespace batch97.Sections.Controllers
             return View("~/Sections/Views/Sections/Index.cshtml", model);
         }
         
-        [Route("sections/{id}")]
         public IActionResult Section(Guid id)
         {
             var model = _api.Pages.GetById<Models.SectionPage>(id);
