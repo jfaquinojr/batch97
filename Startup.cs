@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using batch97.Users;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -27,8 +28,8 @@ namespace batch97
             services.AddPiranhaApplication();
             services.AddPiranhaFileStorage();
             services.AddPiranhaImageSharp();
-            services.AddPiranhaEF(options => options.UseSqlite("Filename=./piranha.db"));
-            services.AddPiranhaIdentityWithSeed<IdentitySQLiteDb>(options => options.UseSqlite("Filename=./piranha.db"));
+            services.AddPiranhaEF(options => options.UseSqlite("Filename=./batch97.db"));
+            services.AddPiranhaIdentityWithSeed<IdentitySQLiteDb, Batch97Identity>(options => options.UseSqlite("Filename=./batch97.db"));
             services.AddPiranhaManager();
             services.AddPiranhaMemCache();
 
