@@ -1,8 +1,9 @@
 using Piranha.AttributeBuilder;
 using Piranha.Extend.Fields;
 using Piranha.Models;
+using System.Collections.Generic;
 
-namespace batch97.Models.Regions
+namespace batch97.Sections.Models.Regions
 {
     public class Section
     {
@@ -17,6 +18,8 @@ namespace batch97.Models.Regions
 
         [Field(Options = FieldOption.HalfWidth)]
         public StringField Teacher { get; set; }
+
+        public IList<Alumnus> Alumni { get; set; }
 
     }
 }

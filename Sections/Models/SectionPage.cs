@@ -3,20 +3,14 @@ using Piranha.Extend.Fields;
 using Piranha.Models;
 using System.Collections.Generic;
 
-namespace batch97.Models
+namespace batch97.Sections.Models
 {
     [PageType(Title = "Class Section page")]
-    [PageTypeRoute(Title = "Default", Route = "/sections")]
+    [PageTypeRoute(Title = "Section", Route = "/section")]
     public class SectionPage : Page<SectionPage>
     {
         /// <summary>
-        /// Gets/sets the page heading.
-        /// </summary>
-        [Region]
-        public Regions.Heading Heading { get; set; }
-
-        /// <summary>
-        /// Gets/sets the available teasers.
+        /// Gets/sets the alumni.
         /// </summary>
         [Region(ListTitle = "Alumni")]
         public IList<Regions.Alumnus> Alumni { get; set; }
@@ -28,7 +22,8 @@ namespace batch97.Models
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public SectionPage() {
+        public SectionPage()
+        {
             Alumni = new List<Regions.Alumnus>();
         }
     }

@@ -52,14 +52,14 @@ namespace batch97
 
             // Build content types
             var pageTypeBuilder = new Piranha.AttributeBuilder.PageTypeBuilder(api)
-                .AddType(typeof(Models.BlogArchive))
                 .AddType(typeof(Models.StandardPage))
-                .AddType(typeof(Models.StartPage))
-                .AddType(typeof(Models.SectionPage));
+                .AddType(typeof(Sections.Models.SectionPage))
+                .AddType(typeof(Sections.Models.SectionListPage));
             pageTypeBuilder.Build()
                 .DeleteOrphans();
-            var postTypeBuilder = new Piranha.AttributeBuilder.PostTypeBuilder(api)
-                .AddType(typeof(Models.BlogPost));
+            var postTypeBuilder = new Piranha.AttributeBuilder.PostTypeBuilder(api);
+                //.AddType(typeof(Sections.Models.Regions.Section))
+                //.AddType(typeof(Sections.Models.Regions.Alumnus));
             postTypeBuilder.Build()
                 .DeleteOrphans();
 

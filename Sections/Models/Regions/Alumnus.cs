@@ -2,7 +2,7 @@ using Piranha.AttributeBuilder;
 using Piranha.Extend.Fields;
 using Piranha.Models;
 
-namespace batch97.Models.Regions
+namespace batch97.Sections.Models.Regions
 {
     public class Alumnus
     {

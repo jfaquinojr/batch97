@@ -5,7 +5,6 @@
     <UserSecretsId>db390fa6-7c01-46c2-8988-783edbd2790c</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="Sections\Models\Regions" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
   <ItemGroup>
