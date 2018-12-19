@@ -1,9 +1,9 @@
 {
-  "name": "batch97",
-  "version": "4.2.0",
-  "description": "Basic Web Template for Piranha CMS",
+  "name": "JFA.Yearbook",
+  "version": "0.0.1",
+  "description": "SJC/SMC Yearbook",
   "main": "index.js",
-  "author": "Håkan Edling",
+  "author": "Jose Jr Aquino",
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
