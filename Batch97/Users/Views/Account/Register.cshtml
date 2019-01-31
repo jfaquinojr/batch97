@@ -14,12 +14,12 @@
     </style>
 }
 <div class="container">
-    @using (var form = Html.BeginForm("Login", "Account", FormMethod.Post, new { @id = "main-form", @class = "form", @role = "form" }))
+    @using (var form = Html.BeginForm("Register", "Account", FormMethod.Post, new { @id = "main-form", @class = "form", @role = "form" }))
     {
         <div class="panel panel-white">
             @Html.AntiForgeryToken()
             <div class="panel-body">
-                <h4>Please login to your account</h4>
+                <h4>Register a new account</h4>
             </div>
             <div class="panel-body">
                 @if (!string.IsNullOrWhiteSpace(ViewBag.Message))
@@ -34,8 +34,11 @@
                 <div class="form-group">
                     @Html.Password("Password", "", new { @class = "form-control", @placeholder = "password" })
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
-                <a asp-action="Register" class="btn btn-outline-secondary">Register</a>
+                <div class="form-group">
+                    @Html.Password("ConfirmPassword", "", new { @class = "form-control", @placeholder = "confirm password" })
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+                <a asp-action="Login" class="btn btn-outline-secondary">Login Instead</a>
                 
             </div>
         </div>

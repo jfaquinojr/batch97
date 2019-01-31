@@ -1,5 +1,5 @@
-@model IEnumerable<JFA.Yearbook.Web.Sections.Models.SectionPage>
-@inject Piranha.IApi Api
+@using Microsoft.AspNetCore.Http
+
 @{
     //ViewBag.Title = Model.Title;
 }
@@ -10,25 +10,7 @@
 </h1>
 
 
-@foreach (var item in Model)
+@if (User.Identity.IsAuthenticated) // && User.IsInRole("Administrator"))
 {
-    <!-- section -->
-    <div class="row">
-        <div class="col-md-7">
-            <a href="#">
-                <img class="img-fluid rounded mb-3 mb-md-0" src="@Url.Content(item.Section.Photo)" alt="">
-            </a>
-        </div>
-        <div class="col-md-5">
-            <h3>@item.Section.Name</h3>
-            <h5>Adviser: @item.Section.Teacher</h5>
-            <a class="btn btn-primary" asp-action="section" asp-route-id="@item.Id">View Students</a>
-        </div>
-    </div>
-    <!-- /.row -->
-    
-    <hr>
+    <a asp-action="Create">Create New Section</a>    
 }
-
-
-

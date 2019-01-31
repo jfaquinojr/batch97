@@ -1,6 +1,3 @@
-using Piranha.AttributeBuilder;
-using Piranha.Extend.Fields;
-using Piranha.Models;
 using System.Collections.Generic;
 
 namespace JFA.Yearbook.Web.Sections.Models.Regions
@@ -10,14 +7,11 @@ namespace JFA.Yearbook.Web.Sections.Models.Regions
         /// <summary>
         /// Gets/sets the optional photo image.
         /// </summary>
-        [Field(Title = "Class photo")]
-        public ImageField Photo { get; set; }
+        public byte[] Photo { get; set; }
 
-        [Field(Options = FieldOption.HalfWidth)]
-        public StringField Name { get; set; }
+        public string Name { get; set; }
 
-        [Field(Options = FieldOption.HalfWidth)]
-        public StringField Teacher { get; set; }
+        public string Teacher { get; set; }
 
         public IList<Alumnus> Alumni { get; set; }
 
